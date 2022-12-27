@@ -24,12 +24,12 @@ class AuthController extends Controller
         ]);
 
         $token = $user->createToken('myAppToken')->plainTextToken;
-        $respone = [
+        $response = [
             'user' => $user ,
             'token' =>$token
         ];
 
-        return response($respone , 201);
+        return response($response , 201);
     }
 
     public function login(Request $request) {
